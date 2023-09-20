@@ -15,7 +15,11 @@ from streamlit_chat import message
 from langchain.callbacks import get_openai_callback
 from sentence_transformers import SentenceTransformer
 
-openapi_key = st.secrets["api"]
+headers={
+    'authorization':st.secrets['api'],
+    'content_type':'application/json'
+}
+# openapi_key = st.secrets["api"]
 
 # "with" notation
 def main():
